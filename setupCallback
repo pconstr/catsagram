@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -F 'client_id=<your client_id here>' -F 'client_secret=<your client_secret here>' -F 'object=tag' -F 'aspect=media' -F 'object_id=cat' -F 'verify_token=<your verify_token here>' -F 'callback_url=http://<your site here>/instagram_callback' https://api.instagram.com/v1/subscriptions/

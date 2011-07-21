@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>catsagram</title>
+  <link href="static/catsagram.css" rel="stylesheet" type="text/css"></link>
+  <script type="text/javascript" src="static/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="static/data-graft.js"></script>
+  <script type="text/javascript" src="static/imagesLoaded.js"></script>
+  <script type="text/javascript" src="static/catsagram.js"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="title">catsagram<span class="titletail">- rolling <a href="http://www.instagram.com" target="_blank">instagram</a> photos of cats</span></div>
+    <div class="subtitle">built with <a href="http://labs.perceptiveconstructs.com/data-graft/doc/doc.html" target="_blank">data-graft.js</a>, <a href="http://jquery.com" target="_blank">jQuery</a> and the <a href="http://www.fontsquirrel.com/fonts/Lane" target="_blank">Lane font</a></div>
+  </div>
+  <hr/>
+  <div id="output"/>
+  <div id="template" data-graft-for="tagging_id">
+    <div class="photo">
+	  <a data-graft--href=":userWebsite" target="_blank">
+	    <img class="userimg" data-graft--src="user.profile_picture"></img>
+	    <span class="username" data-graft-text="user.username"></span>
+	  </a>
+      <div class="caption">
+	<div data-graft-if="caption">
+	  <span data-graft-text="text"></span>
+	</div>
+	<div data-graft-else="">
+	  <span>no caption</span>
+	</div>
+      </div>
+      <a data-graft--href="link" target="_blank"><img class="photoimg" data-graft--src="images.low_resolution.url"></img></a>
+      <div data-graft-if="comments.data">
+	<div data-graft-for="id">
+	  <div class="comment">
+	    <img data-graft--src="from.profile_picture" class="commenterimg"></img>
+	    <span data-graft-text="from.username" class="commentername"></span>
+	    <span data-graft-text="text"></span>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

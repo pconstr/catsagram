@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'LaneNarrowRegular';
+    src: url('/static/LANENAR_-webfont.eot');
+    src: url('/static/LANENAR_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/LANENAR_-webfont.woff') format('woff'),
+         url('/static/LANENAR_-webfont.ttf') format('truetype'),
+         url('/static/LANENAR_-webfont.svg#LaneNarrowRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #4A4A4A;
+    overflow-x: hidden;
+}
+
+#output {
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+span, div {
+   font: normal normal 14px 'LaneNarrowRegular', Arial, sans-serif;
+   color: #C0C0C0;
+}
+
+#header {
+    display: inline-block;
+}
+
+.title {
+   font-size: 50px;
+   margin-left: 15px;
+   margin-top: 15px;
+}
+
+.titletail {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.subtitle {
+   font-size: 18px;
+   margin-left: 15px; 
+   margin-bottom: 20px;
+}
+
+hr {
+   margin-bottom: 40px;
+   margin-left: 0px;
+}
+
+#template {
+    display: none;
+}
+
+.photo {
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 180px;
+    margin-left: 15px;
+    background-color: #464646;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.username {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 5px;
+    width: 130px;
+    overflow: hidden;
+    color: inherit;
+}
+
+.caption {
+    width: 180px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.comment {
+    width: 180px;
+    overflow: hidden;
+}
+
+.userimg {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.commenterimg {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    margin-top: 5px;
+    clear: left;
+}
+
+.commentername {
+    font-weight: bold;
+    color: #C0C0FF;
+}
+
+.photoimg {
+    width: 180px;
+    height: 180px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: #C0C0FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #C0C0FF;
+    text-decoration: none;
+}
+
+a:active {
+    color: #C0C0FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
