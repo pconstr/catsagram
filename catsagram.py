@@ -14,6 +14,7 @@ from ReadWriteLock import ReadWriteLock
 
 from threading import Thread
 from Queue import Queue
+from time import time
 
 import urllib
 import urllib2
@@ -27,7 +28,7 @@ seqLen = 8
 class PhotoCache:
     def __init__(self, maxLen):
         self.l = ReadWriteLock()
-        self.nextT = 1
+        self.nextT = int((time() - 1312742671) * 4)
         self.maxLen = maxLen
         self.m = {}
         self.s = []
@@ -71,7 +72,6 @@ def processUpdates(updates):
 photoCache = PhotoCache(50)
 
 def getUpdates():
-    print >> sys.stderr, 'getting updates'
     req = urllib2.Request(instaURL)
     resp = urllib2.urlopen(req)
     if resp.code == 200:
@@ -81,7 +81,6 @@ def getUpdates():
             for u in reversed(updates):
                 photoId = u['id']
                 photoCache.update(photoId, u)
-            photoCache.dumpLatest(seqLen)
 
 q = Queue()
 
