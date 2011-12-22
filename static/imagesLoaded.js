@@ -15,7 +15,6 @@ $.fn.imagesLoaded = function(callback){
       blank = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 
   function down() {
-      console.log('down');
       if (--len <= 0 && this.src !== blank){ callback.call(elems,this); }
   }
 
