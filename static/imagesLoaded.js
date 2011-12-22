@@ -13,10 +13,13 @@ $.fn.imagesLoaded = function(callback){
   var elems = this.filter('img'),
       len   = elems.length,
       blank = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-      
-  elems.bind('load',function(){
+
+  function down() {
+      console.log('down');
       if (--len <= 0 && this.src !== blank){ callback.call(elems,this); }
-  }).each(function(){
+  }
+
+  elems.bind('load', down).bind('error', down).each(function() {
      // cached images don't fire load sometimes, so we reset src.
      if (this.complete || this.complete === undefined){
         var src = this.src;
