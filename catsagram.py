@@ -21,9 +21,9 @@ import urllib2
 
 from instagramclient import clientId, verify_token
 
-instaURL = 'https://api.instagram.com/v1/tags/cat/media/recent?client_id='+ clientId+ '&count=10'
+instaURL = 'https://api.instagram.com/v1/tags/cat/media/recent?client_id='+ clientId+ '&count=24'
 
-seqLen = 8
+seqLen = 16
 
 class PhotoCache:
     def __init__(self, maxLen):
