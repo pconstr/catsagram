@@ -70,7 +70,7 @@ function doUpdate() {
     if(context.isBusy) {
 	setTimeout(doUpdate, 100);
     } else {
-	graft.update(latestData.slice(latestData.length - displayedLength));
+	graft.update(latestData.slice(latestData.length >= displayedLength ? latestData.length - displayedLength : 0));
     }
 }
 
