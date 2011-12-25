@@ -25,7 +25,7 @@ var context = {
     photo: {
 	preInsertSequence: function(e, finished) {
 	    $(e).hide();
-	    $(e).fadeTo(0);
+	    $(e).fadeTo(0, 0);
 	    finished();
 	},
 	postInsertSequence: function(e, finished) {
