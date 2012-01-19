@@ -128,6 +128,7 @@ def server_static(filename):
     return static_file(filename, root+ '/static')
 
 @route('/catsagram')
+@route('/')
 def server_static():
     return static_file('catsagram.html', root+ '/static')
 
